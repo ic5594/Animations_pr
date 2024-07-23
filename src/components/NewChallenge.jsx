@@ -19,7 +19,7 @@ export default function NewChallenge({ onDone }) {
     setSelectedImage(image);
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const challenge = {
       title: title.current.value,
@@ -44,7 +44,7 @@ export default function NewChallenge({ onDone }) {
 
     onDone();
     addChallenge(challenge);
-  }
+  };
 
   return (
     <Modal title="New Challenge" onClose={onDone}>
